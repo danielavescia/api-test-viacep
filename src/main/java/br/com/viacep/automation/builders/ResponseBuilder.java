@@ -1,7 +1,5 @@
 package br.com.viacep.automation.builders;
 
-import javax.swing.text.html.HTML;
-
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.LogDetail;
 import io.restassured.http.ContentType;
@@ -21,7 +19,7 @@ public class ResponseBuilder {
 
         return new ResponseSpecBuilder()
             .expectStatusCode(200)
-            .log(LogDetail.ALL)
+            .log(LogDetail.BODY)
             .build();
     }
 
@@ -29,7 +27,7 @@ public class ResponseBuilder {
 
         return new ResponseSpecBuilder()
             .expectStatusCode(400)
-            .log(LogDetail.ALL)
+            .log(LogDetail.BODY)
             .expectContentType(ContentType.HTML)
             .build();
     }
