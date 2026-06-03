@@ -25,13 +25,11 @@
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest</artifactId>
             <version>2.2</version>
-            <scope>test</scope>
         </dependency><!-- Source: https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>7.10.2</version>
-            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -53,17 +51,14 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
                 <configuration>
-                    <!-- Align compilation to Java 11 regardless of the JDK used to run Maven -->
-                    <release>11</release>
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
-                            <version>${lombok.version}</version>
+                             <maven.compiler.release>17</maven.compiler.release>
+                            <lombok.version>1.18.34</lombok.version>
                         </path>
                     </annotationProcessorPaths>
-                    <source>15</source>
-                    <target>15</target>
                 </configuration>
             </plugin>
         </plugins>
