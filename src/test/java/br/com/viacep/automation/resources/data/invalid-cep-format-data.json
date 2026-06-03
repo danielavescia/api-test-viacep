@@ -1,0 +1,10 @@
+[
+    {
+        "cenario": "Validar CEP com formato incorreto",
+        "input": "ABC123"
+    },
+    {
+        "cenario": "Validar CEP com formato incorreto",
+        "input": "123"
+    }
+]
