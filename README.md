@@ -3,9 +3,8 @@
 ## Objetivo
 Este projeto tem como objetivo validar o comportamento da API pública do ViaCEP(https://viacep.com.br) através de testes automatizados utilizando boas práticas, como:
 
-* Padrões de design (Client/Service)
+* Padrões de design
 * DataProvider com dados externos (JSON)
-* Configuração via Properties
 * Relatórios com TestNG
 
 ## Tecnologias Utilizadas
@@ -18,3 +17,6 @@ Este projeto tem como objetivo validar o comportamento da API pública do ViaCEP
 ## Execução dos Testes
 * Via Maven:
 ``` mvn clean test ```
+
+## Wiki (Cenários, CTs)
+https://github.com/danielavescia/api-test-viacep/wiki
