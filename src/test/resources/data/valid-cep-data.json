@@ -16,7 +16,8 @@
             "gia": "",
             "ddd": "51",
             "siafi": "8801"
-        }
+        },
+        "expectStatus": 200
     },
     {
         "cenario": "CEP válido", 
@@ -35,6 +36,7 @@
             "gia": "",
             "ddd": "51",
             "siafi": "8801"
-        }
+        },
+        "expectStatus": 200
     }
 ]

@@ -1,0 +1,14 @@
+[
+    {
+        "cenario": "Validar CEP com formato incorreto",
+        "input": "ABC123",
+        "expected": null,
+        "expectStatus": 400
+    },
+    {
+        "cenario": "Validar CEP com formato incorreto",
+        "input": "123",
+        "expected": null,
+        "expectStatus": 400
+    }
+]

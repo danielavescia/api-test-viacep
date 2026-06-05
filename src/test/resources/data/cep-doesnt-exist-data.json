@@ -4,7 +4,8 @@
         "input": "99999999",
         "expected": {
             "erro": "true"
-        }
+        },
+        "expectStatus": 200
     },
 
     {
@@ -12,6 +13,7 @@
         "input": "00000000",
         "expected": {
             "erro": "true"
-        }
+        },
+        "expectStatus": 200
     }
 ]
