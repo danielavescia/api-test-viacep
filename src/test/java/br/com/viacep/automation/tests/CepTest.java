@@ -1,0 +1,41 @@
+package br.com.viacep.automation.tests;
+
+import org.testng.annotations.Test;
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
+import br.com.viacep.automation.assertions.CepAssert;
+import br.com.viacep.automation.builders.RequestBuilder;
+import br.com.viacep.automation.builders.ResponseBuilder;
+import br.com.viacep.automation.pojo.Cep;
+import br.com.viacep.automation.pojo.CepScenario;
+import br.com.viacep.automation.provider.CepDataProvider;
+
+public class CepTest {
+
+    @Test(description = "CT01- Validar CEP Válido", dataProvider = "validCeps",  dataProviderClass = CepDataProvider.class)
+    public void shouldReturnCepSuccesfuly(CepScenario scenario){
+        Cep actual = 
+            given()
+                .spec(RequestBuilder.getDefaultRequestSpec())
+                .pathParam("cep", scenario.getInput())
+            .when()
+                .get()
+            .then()
+                .spec(ResponseBuilder.getSucessResponseSpec())
+                .extract().as(Cep.class);
+        
+        CepAssert.assertEquals(actual, scenario.getExpected());
+    }
+
+    @Test(description = "CT02- Validar CEP inválido com formato incorreto", dataProvider = "cepsDontExist",  dataProviderClass = CepDataProvider.class)
+    public void shouldReturnErrorForCepNotFound(CepScenario scenario){
+            given()
+                .spec(RequestBuilder.getDefaultRequestSpec())
+                .pathParam("cep", scenario.getInput())
+            .when()
+                .get()
+            .then()
+                .spec(ResponseBuilder.getSucessResponseSpec())
+                .body("erro", equalTo("true"));
+    }
+}
