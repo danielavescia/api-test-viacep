@@ -10,17 +10,18 @@ public class CepDataProvider {
     private static final ObjectMapper mapper = new ObjectMapper();
 
     @DataProvider(name = "validCeps")
-
     public static Object[][] validCeps() throws Exception{
         return loadScenarios("src/test/resources/data/valid-cep-data.json");
     }
 
+    @DataProvider(name = "invalidCeps")
      public static Object[][] invalidCeps() throws Exception{
         return loadScenarios("src/test/resources/data/invalid-cep-format-data.json");
     }
 
+    @DataProvider(name = "cepsDontExist")
     public static Object[][] cepDoesnExist() throws Exception{
-       return loadScenarios("src/test/resources/data/cep-doesnt-exist-data");
+       return loadScenarios("src/test/resources/data/cep-doesnt-exist-data.json");
     }
 
     private static Object[][] loadScenarios(String filePath) throws Exception {
