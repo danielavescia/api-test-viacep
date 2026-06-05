@@ -21,8 +21,4 @@ public class CepAssert {
         
         softAssert.assertAll();
     }
-
-    public static void assertErrorEquals(){
-        
-    }
 }
