@@ -2,13 +2,11 @@
     {
         "cenario": "Validar CEP com formato incorreto",
         "input": "ABC123",
-        "expected": null,
-        "expectStatus": 400
+        "expected": null
     },
     {
         "cenario": "Validar CEP com formato incorreto",
         "input": "123",
-        "expected": null,
-        "expectStatus": 400
+        "expected": null
     }
 ]

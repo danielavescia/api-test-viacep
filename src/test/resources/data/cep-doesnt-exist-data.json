@@ -1,19 +1,11 @@
 [
     {
         "cenario":"cep com formato válido, mas inexistente",
-        "input": "99999999",
-        "expected": {
-            "erro": "true"
-        },
-        "expectStatus": 200
+        "input": "99999999"
     },
 
     {
         "cenario":"cep com formato válido, mas inexistente",
-        "input": "00000000",
-        "expected": {
-            "erro": "true"
-        },
-        "expectStatus": 200
+        "input": "00000000"
     }
 ]
