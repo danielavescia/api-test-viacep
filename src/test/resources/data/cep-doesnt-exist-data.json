@@ -1,0 +1,11 @@
+[
+    {
+        "cenario":"cep com formato válido, mas inexistente",
+        "input": "99999999"
+    },
+
+    {
+        "cenario":"cep com formato válido, mas inexistente",
+        "input": "00000000"
+    }
+]

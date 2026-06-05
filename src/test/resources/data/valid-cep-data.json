@@ -1,0 +1,40 @@
+[
+    {
+        "cenario": "CEP válido", 
+        "input": "90040320",
+        "expected":{
+            "cep": "90040-320",
+            "logradouro": "Rua Vieira de Castro",
+            "complemento": "",
+            "unidade": "",
+            "bairro": "Farroupilha",
+            "localidade": "Porto Alegre",
+            "uf": "RS",
+            "estado": "Rio Grande do Sul",
+            "regiao": "Sul",
+            "ibge": "4314902",
+            "gia": "",
+            "ddd": "51",
+            "siafi": "8801"
+        }
+    },
+    {
+        "cenario": "CEP válido", 
+        "input": "91720260",
+        "expected":{
+            "cep": "91720-260",
+            "logradouro": "Avenida Clemenciano Barnasque",
+            "complemento": "",
+            "unidade": "",
+            "bairro": "Teresópolis",
+            "localidade": "Porto Alegre",
+            "uf": "RS",
+            "estado": "Rio Grande do Sul",
+            "regiao": "Sul",
+            "ibge": "4314902",
+            "gia": "",
+            "ddd": "51",
+            "siafi": "8801"
+        }
+    }
+]
