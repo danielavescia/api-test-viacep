@@ -38,4 +38,15 @@ public class CepTest {
                 .spec(ResponseBuilder.getSucessResponseSpec())
                 .body("erro", equalTo("true"));
     }
+
+   @Test(description = "CT03- Validar CEP inexistente", dataProvider = "invalidCeps",  dataProviderClass = CepDataProvider.class)
+    public void shouldReturnErrorForInvalidCepFormat(CepScenario scenario){
+            given()
+                .spec(RequestBuilder.getDefaultRequestSpec())
+                .pathParam("cep", scenario.getInput())
+            .when()
+                .get()
+            .then()
+                .spec(ResponseBuilder.getBadRequestResponseSpec());
+    }
 }
