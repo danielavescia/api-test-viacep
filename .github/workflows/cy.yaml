@@ -29,6 +29,9 @@ jobs:
       - name: Rodar testes
         run: mvn clean test
       
+      - name: Generate HTML report
+        run: mvn surefire-report:report
+        
       - name: Gerar Report Básico
         uses: actions/upload-artifact@v4
         with:
