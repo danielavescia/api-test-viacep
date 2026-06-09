@@ -4,10 +4,13 @@ import java.util.Collections;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Listeners;
+import io.qameta.allure.testng.AllureTestNg;
 import io.restassured.RestAssured;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 
+@Listeners({AllureTestNg.class})
 public class BaseTest {
 
     @BeforeSuite
