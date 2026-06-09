@@ -1,4 +1,4 @@
-package br.com.viacep.automation.pojo;
+package br.com.viacep.automation.model;
 
 import lombok.Data;
 

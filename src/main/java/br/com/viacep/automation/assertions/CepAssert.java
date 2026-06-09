@@ -1,8 +1,7 @@
 package br.com.viacep.automation.assertions;
 
 import org.testng.asserts.SoftAssert;
-
-import br.com.viacep.automation.pojo.Cep;
+import br.com.viacep.automation.model.Cep;
 
 public class CepAssert {
 

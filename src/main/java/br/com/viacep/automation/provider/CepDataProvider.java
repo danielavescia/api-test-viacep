@@ -3,7 +3,8 @@ package br.com.viacep.automation.provider;
 import java.io.File;
 import org.testng.annotations.DataProvider;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import br.com.viacep.automation.pojo.CepScenario;
+
+import br.com.viacep.automation.provider.scenario.CepScenario;
 
 public class CepDataProvider {
 
