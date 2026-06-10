@@ -95,6 +95,7 @@
                 <version>2.12.0</version>
                 <configuration>
                     <reportVersion>${allure.version}</reportVersion>
+                    <port>5050</port>
                 </configuration>
             </plugin>        
         </plugins>
