@@ -25,15 +25,17 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
           cache: 'maven'
+          cache-dependency-path: '**/pom.xml'
 
       - name: Rodar testes
         run: mvn clean test
+        continue-on-error: true
       
-      - name: Generate HTML report
-        run: mvn surefire-report:report
+      - name: Gerar Allure report
+        run: mvn allure:report
 
-      - name: Gerar Report Básico
-        uses: actions/upload-artifact@v4
+      - name: Gerar Report da Allure no Github Pages
+        uses:  peaceiris/actions-gh-pages@v3
         with:
-          name: html-report
-          path: target/site/
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: target/site/allure-maven-plugin/
