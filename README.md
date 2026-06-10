@@ -8,7 +8,7 @@ Este projeto tem como objetivo validar o comportamento da API pública do ViaCEP
 * Relatórios com TestNG
 
 ## Tecnologias Utilizadas
-* Java 17+
+* Java 17
 * TestNG
 * RestAssured
 * Jackson
@@ -21,6 +21,8 @@ Os testes são organizados em 3 camadas de validação:
 - **Contrato:** validação de schema JSON garantindo que a estrutura da resposta não quebra
 - **Regras de Negócio:** asserções nos dados retornados (soft assert para dados válidos e hard assert para dados inválidos)
 
+***
+
 ## Execução dos Testes
 * Via Maven:
 ``` mvn clean test ```
@@ -32,7 +34,8 @@ Os testes são organizados em 3 camadas de validação:
 - Acessar o report:
 http://localhost:5050
 
-## Cenários
+*** 
+
 ## Cenários de teste
 
 ### GET /ws/{cep}/json
