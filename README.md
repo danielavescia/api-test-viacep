@@ -27,12 +27,9 @@ Os testes são organizados em 3 camadas de validação:
 * Via Maven:
 ``` mvn clean test ```
 
-# Visualização do Report
+# Gerar Report
 * Via Maven:
-``` mvn allure:serve ```
-
-- Acessar o report:
-http://localhost:5050
+``` mvn allure:report ```
 
 *** 
 
