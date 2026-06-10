@@ -49,6 +49,9 @@ Os testes são organizados em 3 camadas de validação:
 | CT02 | CEP inexistente | 200, body contém erro: "true" |
 | CT03 | CEP com formato inválido | 400 Bad Request, body contém html |
 
+## Report Allure:
+https://danielavescia.github.io/api-test-viacep/
+
 ## Documentação do projeto
 https://github.com/danielavescia/api-test-viacep/wiki
 
