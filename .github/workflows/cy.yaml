@@ -34,10 +34,13 @@ jobs:
       - name: Gerar Allure report
         run: mvn allure:report
 
+      - name: Verificar estrutura do report
+        run: find target -name "allure-maven.html"
+
       - name: Criar index.html com redirect
         run: |
           echo '<meta http-equiv="refresh" content="0; url=allure-maven.html">' > target/site/allure-maven-plugin/index.html
-          
+
       - name: Gerar Report da Allure no Github Pages
         uses:  peaceiris/actions-gh-pages@v3
         with:
